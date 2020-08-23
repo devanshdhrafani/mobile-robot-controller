@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/ipro/ros_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/ipro/ros_ws/src/diff_drive_bot/include/**",
+                "/home/ipro/ros_ws/src/hector_gazebo/hector_gazebo_plugins/include/**",
+                "/home/ipro/ros_ws/src/hector_gazebo/hector_gazebo_thermal_camera/include/**",
+                "/home/ipro/ros_ws/src/hector_localization/hector_pose_estimation/include/**",
+                "/home/ipro/ros_ws/src/hector_localization/hector_pose_estimation_core/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_quadrotor_actions/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_quadrotor_controller_gazebo/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_quadrotor_interface/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_quadrotor_model/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_quadrotor_pose_estimation/include/**",
+                "/home/ipro/ros_ws/src/hector_quadrotor/hector_uav_msgs/include/**",
+                "/home/ipro/ros_ws/src/learning_tf/include/**",
+                "/home/ipro/ros_ws/src/mobile_robot_controller/include/**",
+                "/home/ipro/ros_ws/src/ros_basics_tutorials/include/**",
+                "/home/ipro/ros_ws/src/ros_essentials_cpp/include/**",
+                "/home/ipro/ros_ws/src/ros_service_assignment/include/**",
+                "/home/ipro/ros_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+                "/home/ipro/ros_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+                "/opt/ros/melodic/share/turtlebot3/turtlebot3_slam/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}
