@@ -5,6 +5,8 @@
     ],
     "files.associations": {
         "*.xacro": "xml",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp"
     }
 }
