@@ -138,6 +138,8 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(basic_controller_node src/basic_controller.cpp)
 add_executable(main_controller_node src/main_controller.cpp)
+add_executable(mr-controller_node src/mr-controller.cpp)
+
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,10 +152,16 @@ add_executable(main_controller_node src/main_controller.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(basic_controller_node
+ target_link_libraries(
+   basic_controller_node
+  ${catkin_LIBRARIES}
+ )
+target_link_libraries(
+   main_controller_node
    ${catkin_LIBRARIES}
  )
-  target_link_libraries(main_controller_node
+ target_link_libraries(
+   mr-controller_node
    ${catkin_LIBRARIES}
  )
 
