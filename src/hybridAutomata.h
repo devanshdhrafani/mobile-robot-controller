@@ -12,6 +12,22 @@ class hybrid_automata{
     private:
         double phi_desired;
         double goalDistance;
+        double obstacleDistance;
+        int obsAngle=0;
+
+        double findObstacle(double ranges[])
+        {   
+            double min=100.0;
+            for(int i=0;i<360;i++)
+            {
+                if(ranges[i]<min)
+                {
+                    min=ranges[i];
+                    obsAngle=i;
+                }
+            }
+            return min;
+        }
 
         double euclideanDistance(double x0, double y0, double x1, double y1){
             return sqrt(pow(x0-x1,2)+pow(y0-y1,2));
@@ -37,12 +53,17 @@ class hybrid_automata{
         }
         
     public:
-        geometry_msgs::Twist switcher(double x_curr, double y_curr, double yaw_curr, double x_desired, double y_desired)
+        geometry_msgs::Twist switcher(double x_curr, double y_curr, double yaw_curr, double x_desired, double y_desired, double range[])
         {
             phi_desired = atan2(y_desired-y_curr, x_desired-x_curr);
             goalDistance = this->euclideanDistance(x_curr,y_curr,x_desired,y_desired);
-            if(goalDistance>0.05){
-                return this->goToGoal(x_curr,y_curr,yaw_curr,x_desired,y_desired);
+            obstacleDistance = this->findObstacle(range);
+            if(goalDistance>0.05)
+            {
+                if(obstacleDistance>0.5){
+                    return this->goToGoal(x_curr,y_curr,yaw_curr,x_desired,y_desired);
+                }
+
             }
             else{
                 geometry_msgs::Twist command_velo;
