@@ -6,7 +6,7 @@
 #include <cmath>
 #include "hybridAutomata.h"
 
-double x_d=2.0, y_d=1.0;
+double x_d=2.0, y_d=-1.0;
 
 //initializing and declaring variables for robot's current pose
 double x=0,y=0,roll=0,pitch=0,yaw=0;

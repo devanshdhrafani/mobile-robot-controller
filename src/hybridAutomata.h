@@ -4,7 +4,9 @@
 #include <cmath>
 
 double kP=0.3;
-double kP_vel=0.5;
+double kP_vel=0.7;
+double v0=1.0;
+double alpha=0.7;
 
 class hybrid_automata{
     private:
@@ -19,14 +21,15 @@ class hybrid_automata{
         {
             geometry_msgs::Twist command_velo;
             double headingError = phi_desired-yaw_curr;
-            headingError = abs(headingError);
+            headingError = atan2(sin(headingError),cos(headingError));
+            //headingError = abs(headingError);
             ROS_INFO("Executing GTG, HeadingError: %f, DistToGoal: %f",headingError,goalDistance);
 
             command_velo.angular.x = 0;
             command_velo.angular.y = 0;
-            command_velo.angular.z = kP*headingError;
+            command_velo.angular.z = kP*headingError; //dividing by pi to normalise error
 
-            command_velo.linear.x = kP_vel*goalDistance;
+            command_velo.linear.x = kP_vel*v0*(1-exp(-1*alpha*pow(goalDistance,2))); //for large error, v goes to v0
             command_velo.linear.y = 0;
             command_velo.linear.z = 0;
             
@@ -38,7 +41,7 @@ class hybrid_automata{
         {
             phi_desired = atan2(y_desired-y_curr, x_desired-x_curr);
             goalDistance = this->euclideanDistance(x_curr,y_curr,x_desired,y_desired);
-            if(goalDistance>0.1){
+            if(goalDistance>0.05){
                 return this->goToGoal(x_curr,y_curr,yaw_curr,x_desired,y_desired);
             }
             else{
