@@ -136,8 +136,8 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(basic_controller_node src/basic_controller.cpp)
-add_executable(main_controller_node src/main_controller.cpp)
+add_executable(controller-v0_node src/controller-v0.cpp)
+add_executable(controller-v1_node src/controller-v1.cpp)
 add_executable(mr-controller_node src/mr-controller.cpp)
 
 
@@ -153,11 +153,11 @@ add_executable(mr-controller_node src/mr-controller.cpp)
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(
-   basic_controller_node
+   controller-v0_node
   ${catkin_LIBRARIES}
  )
 target_link_libraries(
-   main_controller_node
+   controller-v1_node
    ${catkin_LIBRARIES}
  )
  target_link_libraries(

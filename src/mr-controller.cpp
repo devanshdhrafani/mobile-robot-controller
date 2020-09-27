@@ -8,7 +8,7 @@
 #include "hybridAutomata.h"
 
 
-double x_d=3.0, y_d=-2.0;
+double x_d=3.0, y_d=-2.0;   //target goal location
 
 //initializing and declaring variables for robot's current pose
 double x=0,y=0,roll=0,pitch=0,yaw=0;
