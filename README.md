@@ -18,7 +18,7 @@ This is a ROS Package for controlling mobile robots. It was inspired by and borr
 
 ## Demo
 ![Mobile Robot Controller clip](https://github.com/devanshdhrafani/mobile-robot-controller/raw/master/images/mr-controller.gif)
-* Goal point marked by * *
+*Goal point marked by \**
 You can try out the package by following these steps:
 1. Load the Gazebo Environment. By default, the world is empty. You can add obstacles using the `insert` tab in Gazebo or changing the `turtlebot3_world.world` file.
 
