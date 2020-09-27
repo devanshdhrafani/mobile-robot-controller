@@ -18,10 +18,16 @@ This is a ROS Package for controlling mobile robots. It was inspired by and borr
 
 ## Demo
 You can try out the package by following these steps:
-1. Load the Gazebo Environment. By default, the world is empty. You can add obstacles using the `insert` tab in Gazebo or changing the `turtlebot3_world.world` file. 
-`$ roslaunch turtlebot3_gazebo turtlebot3_world.launch`
-2. Start the `mr-controller` node. The default goal location is `[3.0,-2.0]`. You can change this by modifying the variable `x_d` and `y_d` in the `mr-controller.cpp` file.  
-`$ rosrun mobile_robot_controller mr-controller_node`
+1. Load the Gazebo Environment. By default, the world is empty. You can add obstacles using the `insert` tab in Gazebo or changing the `turtlebot3_world.world` file.
+
+```
+$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
+```
+
+2. Start the `mr-controller` node. The default goal location is `[3.0,-2.0]`. You can change this by modifying the variable `x_d` and `y_d` in the `mr-controller.cpp` file.
+```
+$ rosrun mobile_robot_controller mr-controller_node
+```
 3. Watch the robot go to the goal location and avoiding obstacles on the way.
 
 ## Usage
