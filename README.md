@@ -40,7 +40,7 @@ Although this package is written for the `Turtlebot3 Waffle` robot, it can be ea
 - [Devansh Dhrafani](https://github.com/devanshdhrafani)
 
 # To-Do
-- [ ] Add demo clips.
+- [x] Add demo clips.
 - [ ] Add examples for wall following.
 - [ ] Change PID control from hardcode to [ROS PID package](http://wiki.ros.org/pid).
 - [ ] Add support for custom goal points using `Rviz: 2D Nav Goal`. 
