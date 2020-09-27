@@ -17,7 +17,7 @@ This is a ROS Package for controlling mobile robots. It was inspired by and borr
 4. Check if the compilation was successful by invoking `rospack find mobile_robot_controller` in your terminal. It should print out the location of the `mobile_robot_controller` folder.
 
 ## Demo
-![Mobile Robot Controller clip](https://github.com/devanshdhrafani/mobile-robot-controller/raw/master/images/mr-controller.gif)
+![Mobile Robot Controller clip](https://github.com/devanshdhrafani/mobile-robot-controller/raw/master/images/finalGIF.gif)
 
 *\*=Goal Point*
 
